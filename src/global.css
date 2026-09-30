@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-primary: "Cinzel", serif;
+    --font-secondary: "Montserrat", sans-serif;
+
+    --color-primary: #10192E;
+    --color-secondary: #000000;
+    --color-accent: #000000;
+    --color-background: #000000;
+    --color-text: #000000;
+    --color-yellow: #C9A877;
+
+    --animate-marquee-up: marquee-up 18s linear infinite;
+    --animate-marquee-down: marquee-down 18s linear infinite;
+    --animate-marquee-x: marquee-x 28s linear infinite;
+
+    --color-accent: #079ed4;
+}
+
+@keyframes marquee-up {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes marquee-down {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes marquee-x {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-secondary);
+}
