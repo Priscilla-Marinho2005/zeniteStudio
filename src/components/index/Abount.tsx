@@ -2,7 +2,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
     FaInstagram,
-    FaLinkedinIn,
     FaWhatsapp,
     FaFacebook,
     FaRegHeart,
@@ -57,8 +56,8 @@ function InstagramPhone() {
                             </span>
                         </div>
 
-                        <div className="relative z-0 flex h-full flex-col pt-8 sm:pt-10">
-                            <div className="flex items-center justify-between px-3 pb-1.5 sm:px-4 sm:pb-2">
+                        <div className="relative z-0 flex h-full flex-col pt-9 sm:pt-11">
+                            <div className="flex items-center justify-between px-3 pb-1.5 sm:px-4 sm:pb-2 mb-2.5 border-b border-black/10">
                                 <p className="font-primary text-[13px] tracking-tight text-primary sm:text-[15px]">
                                     Instagram
                                 </p>
@@ -74,10 +73,10 @@ function InstagramPhone() {
                                     />
                                     <div className="min-w-0 flex-1">
                                         <p className="truncate text-[10px] font-semibold text-primary sm:text-[11px]">
-                                            zenitestudio
+                                        zenitestudioo
                                         </p>
                                         <p className="text-[8px] text-gray-400 sm:text-[9px]">
-                                            São Paulo, Brasil
+                                            Recife, Brasil
                                         </p>
                                     </div>
                                     <HiOutlineDotsHorizontal
@@ -111,7 +110,7 @@ function InstagramPhone() {
                                     <div className="flex items-center gap-2.5 text-primary sm:gap-3">
                                         <FaRegHeart size={14} />
                                         <FaRegComment size={14} />
-                                        <FiSend size={13} />
+                                        <FiSend size={14} />
                                     </div>
                                     <FaRegBookmark
                                         size={13}
@@ -123,33 +122,19 @@ function InstagramPhone() {
                                     <p className="text-[10px] font-semibold text-primary sm:text-[11px]">
                                         248 curtidas
                                     </p>
-                                    <p className="mt-1 text-[10px] leading-snug text-primary/90 sm:text-[11px]">
+                                    <p className="mt-2.5 text-[10px] leading-snug text-primary/90 sm:text-[11.8px]">
                                         <span className="font-semibold">
-                                            zenitestudio
+                                        zenitestudioo
                                         </span>{" "}
                                         <span className="text-primary/70">
-                                            Comunicação com ideia — não só com
-                                            post.
+                                        <br />
+                                        Marketing que pensa antes de postar.
                                         </span>
                                     </p>
                                     <p className="mt-1 text-[8px] uppercase tracking-wide text-gray-400 sm:text-[9px]">
                                         Há 2 horas
                                     </p>
                                 </div>
-
-                                <div className="mt-2 border-t border-gray-100 px-2.5 pt-2 opacity-50 sm:mt-3 sm:px-3 sm:pt-2.5">
-                                    <div className="flex items-center gap-2">
-                                        <img
-                                            src="/logo.png"
-                                            alt=""
-                                            className="h-5 w-5 rounded-full object-cover sm:h-6 sm:w-6"
-                                        />
-                                        <p className="text-[9px] font-semibold text-primary sm:text-[10px]">
-                                            zenitestudio
-                                        </p>
-                                    </div>
-                                </div>
-
                                 <div className="mx-auto mt-auto mb-2 h-0.75 w-20 rounded-full bg-primary/15 sm:h-1 sm:w-24" />
                             </article>
                         </div>
@@ -228,11 +213,11 @@ export default function About() {
                         }}
                         animate={
                             isInView
-                                ? {
-                                      scale: 1,
-                                      opacity: 1,
-                                      y: 0,
-                                  }
+                                    ? {
+                                        scale: 1,
+                                        opacity: 1,
+                                        y: 0,
+                                    }
                                 : {}
                         }
                         transition={{
@@ -251,10 +236,10 @@ export default function About() {
                     }}
                     animate={
                         isInView
-                            ? {
-                                  opacity: 1,
-                                  x: 0,
-                              }
+                                ? {
+                                    opacity: 1,
+                                    x: 0,
+                                }
                             : {}
                     }
                     transition={{
@@ -287,6 +272,8 @@ export default function About() {
                     <div className="flex items-center justify-center gap-3 pt-1 sm:gap-4 lg:justify-start">
                         <a
                             href="https://www.instagram.com/zenitestudioo/"
+                            target="_blank"
+                            rel="noreferrer"
                             aria-label="Instagram"
                             className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-all duration-300 hover:bg-yellow hover:text-primary sm:h-11 sm:w-11"
                         >
@@ -294,16 +281,10 @@ export default function About() {
                         </a>
 
                         <a
-                            href="#"
-                            aria-label="LinkedIn"
-                            className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-all duration-300 hover:bg-yellow hover:text-primary sm:h-11 sm:w-11"
-                        >
-                            <FaLinkedinIn size={17} />
-                        </a>
-
-                        <a
-                            href="#"
+                            href="https://wa.me/558185176266"
                             aria-label="WhatsApp"
+                            target="_blank"
+                            rel="noreferrer"
                             className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white transition-all duration-300 hover:bg-yellow hover:text-primary sm:h-11 sm:w-11"
                         >
                             <FaWhatsapp size={18} />
@@ -321,10 +302,7 @@ export default function About() {
                 {channels.map((channel, index) => (
                     <a
                         key={index}
-                        href={channel.href}
-                        target={channel.external ? "_blank" : undefined}
-                        rel={channel.external ? "noreferrer" : undefined}
-                        className="flex items-center justify-center gap-3 transition-opacity hover:opacity-80 md:justify-start"
+                        className="flex items-center justify-center gap-3 md:justify-start cursor-default"
                     >
                         {channel.icon}
                         <p className="font-primary text-sm text-primary sm:text-base md:text-lg">
