@@ -1,4 +1,5 @@
 import Nav from "./UX/Nav";
+import Footer from "./UX/Footer";
 
 export default function Layout({
     children,
@@ -10,6 +11,8 @@ export default function Layout({
             <Nav />
 
             <main className="mx-auto max-w-340">{children}</main>
+
+            <Footer />
         </div>
     );
 }

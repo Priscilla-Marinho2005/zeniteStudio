@@ -3,12 +3,10 @@ import { useRef } from "react";
 import {
     FaInstagram,
     FaWhatsapp,
-    FaFacebook,
     FaRegHeart,
     FaRegComment,
     FaRegBookmark,
 } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { FiSend } from "react-icons/fi";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
@@ -144,7 +142,7 @@ function InstagramPhone() {
         </div>
     );
 }
-
+/*
 const channels = [
     {
         href: "https://www.instagram.com/zenitestudioo/",
@@ -188,7 +186,7 @@ const channels = [
         ),
         icon: <FcGoogle size={26} className="shrink-0 sm:text-[30px]" />,
     },
-];
+];*/
 
 export default function About() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -293,6 +291,7 @@ export default function About() {
                 </motion.div>
             </div>
 
+            {/*
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -310,7 +309,7 @@ export default function About() {
                         </p>
                     </a>
                 ))}
-            </motion.div>
+            </motion.div>*/}
         </section>
     );
 }
